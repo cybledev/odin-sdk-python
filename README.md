@@ -6,21 +6,21 @@ The Odin SDK for Python allows you to easily interact with the Odin API and acce
 
 To use the Odin SDK in your Python project, you need to install it using pip:
 
-<!-- ```bash
-pip install odin_client
-``` -->
+```bash
+pip install odin-cyble
+```
 ## Usage
 
 Import the package into your Go code and create an instance of the `odin.APIClient` by providing the base API URL and your API key:
 ```python
-from odin_client import OdinClient
+from odin.odin_client import OdinClient
 
 client = OdinClient("https://api.getodin.com/v1", "<APIKey>")
 ```
 
 ## Examples
 
-In the "example.py", you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk-python` package.
+In the "example.py", you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk` package.
 
 Each example is a standalone Go program that showcases specific functionalities of the SDK.
 
