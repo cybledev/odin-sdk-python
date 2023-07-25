@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "odin-cyble"
+version = "0.0.6"
+description = "Allows to interact easily with the Odin API and access various cybersecurity services, certificate information, and more."
+authors = ["Anukul Kumar <anukul.kumar@cyble.com>"]
+readme = "README.md"
+packages = [{include = "odin"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
