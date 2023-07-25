@@ -1,4 +1,4 @@
-from odin_client import OdinClient
+from odin.odin_client import OdinClient
 import json
 import requests
 from exceptions import APIException
@@ -22,7 +22,7 @@ def ex_hosts_ip_details():
         response = client.get_hosts_ip_details("223.217.65.218")
         print(response.success)
         for svc in response.data.services:
-            print(svc.name)
+            print(f"Service Name: {svc.name}, Port: {svc.port}")
     except APIException as e:
         print(e.status_code)
         print(e.message)
@@ -47,8 +47,8 @@ def ex_search_hosts():
 def ex_hosts_summary():
     try:
         response = client.get_hosts_summary("services.port",9)
-        print(response.success)
-        print(len(response.data.buckets))
+        for bucket in response.data.buckets:
+            print(f"Service: {bucket.key}, Count: {bucket.doc_count}")
     except APIException as e:
         print(e.status_code)
         print(e.message)
