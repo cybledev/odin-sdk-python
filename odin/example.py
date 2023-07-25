@@ -3,7 +3,7 @@ import json
 import requests
 from exceptions import APIException
 
-client = OdinClient("https://api.getodin.com/v1", "<APIKey>", timeout=60)
+client = OdinClient("https://api.getodin.com/v1", "<APIKey>")
 
 # Example for using get_hosts_count
 def ex_hosts_count():
