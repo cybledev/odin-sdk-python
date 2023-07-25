@@ -7,7 +7,7 @@ from models.get_hosts_summary_response import GetHostSummaryResponse
 from models.get_certificate_count import GetCertificatesCountResponse
 from models.get_certificate_hash_details import GetCertificateHashDetails
 from models.get_certificates_summary import GetCertificatesSummaryResponse
-from exceptions import *
+from exceptions import APIException
 import json
 
 class OdinClient:
