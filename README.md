@@ -15,7 +15,7 @@ Import the package into your Go code and create an instance of the `odin.APIClie
 ```python
 from odin_client import OdinClient
 
-client = OdinClient("https://api.getodin.com/v1", "<APIKey>", timeout=60)
+client = OdinClient("https://api.getodin.com/v1", "<APIKey>")
 ```
 
 ## Examples
