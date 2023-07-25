@@ -14,9 +14,7 @@ pip install odin_client
 Import the package into your Go code and create an instance of the `odin.APIClient` by providing the base API URL and your API key:
 ```python
 from odin_client import OdinClient
-```
 
-```python
 client = OdinClient("https://api.getodin.com/v1", "<APIKey>", timeout=60)
 ```
 
