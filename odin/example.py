@@ -1,12 +1,10 @@
-from odin.odin_client import OdinClient
-import json
-import requests
+from odin import OdinClient
 from exceptions import APIException
 
 client = OdinClient("https://api.getodin.com/v1", "<APIKey>")
 
-# Example for using get_hosts_count
 def ex_hosts_count():
+    # Example for using get_hosts_count
     try:
         response = client.get_hosts_count("string")
         print(response.success)
@@ -16,13 +14,33 @@ def ex_hosts_count():
         print(e.status_code)
         print(e.message)
         
-# Example for using get_hosts_ip_details
 def ex_hosts_ip_details():
+    # Example for using get_hosts_ip_details
     try:
-        response = client.get_hosts_ip_details("223.217.65.218")
+        response = client.get_hosts_ip_details("100.26.248.109")
         print(response.success)
         for svc in response.data.services:
             print(f"Service Name: {svc.name}, Port: {svc.port}")
+            
+    except APIException as e:
+        print(e.status_code)
+        print(e.message)
+
+def ex_hosts_cve_details():
+    # Example for using get_hosts_cve_details
+    try:
+        response = client.get_hosts_cve_details("100.26.248.109")
+        print(response.success)
+        
+        for cve_id, cve_entry in response.data.items():
+            print("CVE ID:", cve_id)
+            print("References:", cve_entry.references)
+            print("Score:", cve_entry.score)
+            print("Services:", cve_entry.services)
+            print("Severity:", cve_entry.severity)
+            print("Summary:", cve_entry.summary)
+            print("Vector String:", cve_entry.vector_string)
+            print("Weakness:", cve_entry.weakness)
     except APIException as e:
         print(e.status_code)
         print(e.message)
@@ -105,3 +123,6 @@ if __name__ == "__main__":
     # ex_certificate_hash_details()
     # ex_certificates_summary()
     # ex_search_certificates()
+    # ex_search_hosts()
+    # ex_hosts_cve_details()
+    # ex_hosts_ip_details()
