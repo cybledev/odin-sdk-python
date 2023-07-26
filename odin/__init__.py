@@ -4,6 +4,7 @@ from odin.odin_client import OdinClient
 from odin.exceptions import APIException
 from odin.models.certificate_search_response_model import CertificateSearchResponse
 from odin.models.get_host_count import GetHostsCountResponse
+from odin.models.get_hosts_cve_details import CVEDetailsResponse
 from odin.models.get_hosts_ip_details_response import GetHostsIpDetailsResponse
 from odin.models.search_hosts_response_model import SearchHostsResponse
 from odin.models.get_hosts_summary_response import GetHostSummaryResponse
