@@ -133,6 +133,7 @@ class Location:
 class Service:
     def __init__(self):
         self._meta = Meta()
+        self.cve = []
         self.extra_info = None
         self.last_updated_at = None
         self.modules = Modules()
@@ -146,6 +147,10 @@ class Service:
 
     def populate_from_data(self, data):
         self._meta.populate_from_data(data.get('_meta', {}))
+        if data.get('cve') is not None:
+            self.cve = [CVE(cve_item['id'], cve_item['severity']) for cve_item in data.get('cve', [])]
+        else:
+            self.cve = []
         self.extra_info = data.get('extra_info')
         self.last_updated_at = data.get('last_updated_at')
         self.modules.populate_from_data(data.get('modules', {}))
@@ -200,6 +205,12 @@ class Encoding:
         self.raw = data.get('raw')
 
         return self
+    
+class CVE:
+    def __init__(self, cve_id, severity):
+        self.id = cve_id
+        self.severity = severity
+
 class Meta:
     def __init__(self):
         self.category = None
@@ -244,8 +255,3 @@ class HTTP:
         self.transfer_encoding = data.get('transfer_encoding')
 
         return self
-
-
-
-# Classes ASN, Hostname, Location, Service, Tag, and Whois remain the same as in the previous implementation
-

@@ -1,11 +1,9 @@
-
 class GetHostsIpDetailsResponse:
     def __init__(self, data):
         self.success = None
         self.data = Data()
 
         self.success = data.get('success')
-        self.message = data.get('message')
         self.data.populate_from_data(data.get('data', {}))
 
 
@@ -126,6 +124,7 @@ class Service:
         self.softwares = []
         self.tunnel = None
         self.version = None
+        self.cve = []
 
     def populate_from_data(self, data):
         self._meta.populate_from_data(data.get('_meta', {}))
@@ -139,9 +138,14 @@ class Service:
         self.softwares = data.get('softwares', [])
         self.tunnel = data.get('tunnel')
         self.version = data.get('version')
+        self.cve = [CVE(cve_item['id'], cve_item['severity']) for cve_item in data.get('cve', [])]
 
         return self
 
+class CVE:
+    def __init__(self, cve_id, severity):
+        self.id = cve_id
+        self.severity = severity
 
 class Meta:
     def __init__(self):
@@ -161,30 +165,30 @@ class Meta:
 
 class Modules:
     def __init__(self):
-        self.http = HTTP()
+        self.oracle = Oracle()
 
     def populate_from_data(self, data):
-        self.http.populate_from_data(data.get('http', {}))
+        self.oracle.populate_from_data(data.get('oracle', {}))
 
         return self
 
 
-class HTTP:
+class Oracle:
     def __init__(self):
-        self.content_length = None
-        self.headers = {}
-        self.protocol = None
-        self.redirects = []
-        self.status_code = None
-        self.transfer_encoding = None
+        self.accept_version = None
+        self.connect_flags0 = {}
+        self.connect_flags1 = {}
+        self.did_resend = None
+        self.global_service_options = {}
+        self.nsn_service_versions = {}
 
     def populate_from_data(self, data):
-        self.content_length = data.get('content_length')
-        self.headers = data.get('headers', {})
-        self.protocol = data.get('protocol')
-        self.redirects = data.get('redirects', [])
-        self.status_code = data.get('status_code')
-        self.transfer_encoding = data.get('transfer_encoding')
+        self.accept_version = data.get('accept_version')
+        self.connect_flags0 = data.get('connect_flags0', {})
+        self.connect_flags1 = data.get('connect_flags1', {})
+        self.did_resend = data.get('did_resend')
+        self.global_service_options = data.get('global_service_options', {})
+        self.nsn_service_versions = data.get('nsn_service_versions', {})
 
         return self
 
