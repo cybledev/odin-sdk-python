@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 
 from odin.odin_client import OdinClient
+from odin.exceptions import APIException
 from odin.models.certificate_search_response_model import CertificateSearchResponse
 from odin.models.get_host_count import GetHostsCountResponse
 from odin.models.get_hosts_ip_details_response import GetHostsIpDetailsResponse
@@ -13,6 +14,7 @@ from odin.models.get_certificates_summary import GetCertificatesSummaryResponse
 
 __all__ = [
     'OdinClient',
+    'APIException'
     'CertificateSearchResponse',
     'GetHostsCountResponse',
     'GetHostsIpDetailsResponse',
