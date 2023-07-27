@@ -3,6 +3,7 @@ class GetHostsIpDetailsResponse:
         self.success = None
         self.data = Data()
 
+        self.message = data.get('message')
         self.success = data.get('success')
         self.data.populate_from_data(data.get('data', {}))
 
