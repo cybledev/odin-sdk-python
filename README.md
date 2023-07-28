@@ -21,12 +21,13 @@ from odin import OdinClient
 
 client = OdinClient("https://api.getodin.com/v1", "<APIKey>")
 
-def ex_certificate_count():
-    """Example for using get_certificate_count"""
+def ex_hosts_count():
+    # Example for using get_hosts_count
     try:
-        response = client.get_certificate_count("string")
+        response = client.get_hosts_count("string")
         print(response.success)
         print(response.data.count)
+        
     except APIException as e:
         print(e.status_code)
         print(e.message)
