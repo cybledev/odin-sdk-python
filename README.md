@@ -1,9 +1,9 @@
 # Odin SDK for Python
 
-Odin offers precise internet insights to infosec teams, enhancing security by proactively spotting threats in their attack surface. It scans the entire IPv4, identifying 100+ public services and creating a comprehensive inventory of hosts, domains, certificates, and more. With in-depth scanning of sensitive ports and detailed service analysis, Odin provides unparalleled understanding of an organization's online presence.
+ODIN's primary focus is to equip infosec teams with a precise depiction of the internet, enabling them to strengthen their security defences and proactively detect threats within their attack surface.
 
 
-The Odin SDK for Python allows you to easily interact with the [Odin API](https://getodin.com/docs/api) and access various cybersecurity services, certificate information, and more.
+The Odin SDK for Python allows you to easily interact with the [Odin API](https://getodin.com) and access various cybersecurity services, certificate information, and more.
 
 ## Installation
 
