@@ -17,7 +17,7 @@ pip install odin-sdk-python
 
 In the "example.py", you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk-python` package.
 
-Each example is a standalone Go program that showcases specific functionalities of the SDK.
+Each example is a standalone Python program that showcases specific functionalities of the SDK.
 
 ```python
 from odin import OdinClient, APIException
