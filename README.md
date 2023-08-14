@@ -39,6 +39,6 @@ def ex_hosts_count():
 Make sure to replace `<APIKey>` with your actual Odin API key. 
 
 
-Thank you for using the Odin SDK for Go. If you encounter any issues, find a bug, or want to contribute, feel free to open an issue or submit a pull request. Your feedback and contributions are highly appreciated!
+Thank you for using the Odin SDK for Python. If you encounter any issues, find a bug, or want to contribute, feel free to open an issue or submit a pull request. Your feedback and contributions are highly appreciated!
 
 For more information about our other projects and services, visit our website at https://www.getodin.com.
