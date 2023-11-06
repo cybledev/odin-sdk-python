@@ -13,6 +13,8 @@ To use the Odin SDK in your Python project, you need to install it using pip:
 pip install odin-sdk-python
 ```
 
+**⚠️ Important Note for macOS Users:** We recommend using a newer version of the Python interpreter, such as the one installed via Homebrew, to ensure compatibility and avoid potential issues related to the legacy SSL library bundled with the default macOS Python interpreter.
+
 ## Examples
 
 In the "example.py", you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk-python` package.
