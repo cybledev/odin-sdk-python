@@ -17,7 +17,7 @@ pip install odin-sdk-python
 
 ## Examples
 
-Here is the [Example](https://github.com/cybledev/odin-sdk-go/tree/main/examples), you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk-python` package.
+Here is the [Example](https://github.com/cybledev/odin-sdk-python/blob/main/odin/example.py), you can find various usage examples demonstrating how to interact with the Odin API using the `odin-sdk-python` package.
 
 Each example is a standalone Python program that showcases specific functionalities of the SDK.
 

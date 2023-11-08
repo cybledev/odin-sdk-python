@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "odin-sdk-python"
-version = "0.0.11"
+version = "0.0.12"
 description = "Allows to interact easily with the Odin API and access various cybersecurity services, certificate information, and more."
 authors = ["Anukul Kumar <anukul.kumar@cyble.com>"]
 readme = "README.md"
